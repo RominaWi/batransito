@@ -37,5 +37,5 @@ stream = TweetsListener()
 streamingApi = tweepy.Stream(auth=api.auth, listener=stream)
 
 streamingApi.filter(
-    follow=["1280697515545956360"]
+    follow=["235200726"]
 )
