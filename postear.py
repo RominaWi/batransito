@@ -17,7 +17,7 @@ class TweetsListener(tweepy.StreamListener):
 
     def on_status(self, status):
         tweet = "-> " + (status.text)
-        #api.update_status(tweet)
+        api.update_status(tweet)
         print (tweet)
         
     def on_error(self, status_code):
