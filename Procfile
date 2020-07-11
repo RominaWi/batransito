@@ -1,1 +1,1 @@
-worker: python postear.py
+web python postear.py
