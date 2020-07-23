@@ -16,6 +16,10 @@ class TweetsListener(tweepy.StreamListener):
         print ("Estoy conectado")
 
     def on_status(self, status):
+        if status.user.id_str != '235200726':
+            return
+        if hasattr(status, "retweeted_status"):
+            return
         tweet = "-> " + (status.text)
         api.update_status(tweet)
         print (tweet)
