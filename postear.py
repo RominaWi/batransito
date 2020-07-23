@@ -18,8 +18,8 @@ class TweetsListener(tweepy.StreamListener):
     def on_status(self, status):
         if status.user.id_str != '235200726':
             return
-        if hasattr(status, "retweeted_status"):
-            return
+        #if hasattr(status, "retweeted_status"):
+        #    return
         tweet = "-> " + (status.text)
         # tweet = status.extended_tweet["full_text"]
         api.update_status(tweet)
