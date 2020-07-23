@@ -20,8 +20,8 @@ class TweetsListener(tweepy.StreamListener):
             return
         if hasattr(status, "retweeted_status"):
             return
-        # tweet = "-> " + (status.text)
-        tweet = status.extended_tweet["full_text"]
+        tweet = "-> " + (status.text)
+        # tweet = status.extended_tweet["full_text"]
         api.update_status(tweet)
         print (tweet)
         
